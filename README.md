@@ -1,2 +1,2 @@
-# Project_M.A.S.C
+# Project S.C.A.M
 Project 2
