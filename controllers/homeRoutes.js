@@ -1,20 +1,19 @@
-const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { User } = require("../models");
+const withAuth = require("../utils/auth");
 
-// TODO: Add a comment describing the functionality of the withAuth middleware
-router.get('/', withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      attributes: { exclude: ["password"] },
+      order: [["name", "ASC"]],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render("homepage", {
       users,
-      // TODO: Add a comment describing the functionality of this property
+
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -22,14 +21,13 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  // TODO: Add a comment describing the functionality of this if statement
+router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
