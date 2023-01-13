@@ -23,7 +23,7 @@ const session = {
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
-app.get("/", (req, res) => res.render("./public/index.html"));
+app.get("/", (req, res) => res.render("index"));
 
 app.use(express.static("public"));
 
