@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "run seed": "node seeds/seed.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -14,6 +15,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.28.0",
     "session": "^0.1.0"
