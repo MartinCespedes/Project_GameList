@@ -14,14 +14,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-router.get("/login", async (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  } 
-  
-  res.render("login");
-  
+router.post("/login", async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ where: { email: req.body.email } });

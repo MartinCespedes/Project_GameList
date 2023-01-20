@@ -1,0 +1,27 @@
+[
+    {
+        "username": "johndoe",
+        "email": "john@email.com",
+        "password": "testpassword"
+    },
+    {
+        "username": "evagreen",
+        "email": "eva@email.com",
+        "password": "testpassword"
+    },
+    {
+        "username": "elizabethc",
+        "email": "liz@email.com",
+        "password": "testpassword"
+    },
+    {
+        "username": "jennaortega",
+        "email": "jenna@email.com",
+        "password": "testpassword"
+    },
+    {
+        "username": "wednesdayadd",
+        "email": "wednesday@email.com",
+        "password": "snapsnap"
+    }
+]  
