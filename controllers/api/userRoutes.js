@@ -1,6 +1,27 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+
+router.get('/', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['username', 'ASC']],
+    });
+
+    const users = userData.map((project) => project.get({ plain: true }));
+
+    res.render('userpage', {
+      users,
+      // Pass the logged in flag to the template
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create({
