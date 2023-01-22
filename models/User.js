@@ -16,9 +16,14 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
+      // prevents null values
       allowNull: false,
+      // will only allow alphanumeric characters
+      validate: {
+        isAlphanumeric: true,
+      },
     },
     email: {
       type: DataTypes.STRING,
@@ -31,13 +36,15 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      // must be longer than 8 characters
       validate: {
         len: [8],
       },
     },
   },
   {
-    hooks: {
+    hooks: 
+    {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
