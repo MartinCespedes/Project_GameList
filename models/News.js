@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Game extends Model {}
+class News extends Model {}
 
-Game.init(
+News.init(
   {
     // Manually define the primary key
     id: {
@@ -12,22 +12,19 @@ Game.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
     },
-    background_image: {
+    date: {
       type: DataTypes.STRING,
     },
     description: {
-      type: DataTypes.STRING(3000),
-    },
-    released: {
       type: DataTypes.STRING,
     },
-    metacritic: {
-      type: DataTypes.INTEGER,
+    image: {
+      type: DataTypes.STRING,
     },
-    genres: {
+    link: {
       type: DataTypes.STRING,
     }
   },
@@ -37,8 +34,8 @@ Game.init(
     // Prevent sequelize from renaming the table
     freezeTableName: true,
     underscored: true,
-    modelName: "game",
+    modelName: "news",
   }
 );
 
-module.exports = Game;
+module.exports = News;
