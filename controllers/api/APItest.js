@@ -1,8 +1,10 @@
-
+const { clear } = require('console');
+const fs = require('fs');
 let goodgames = []
 
 let RandomGames = []
 
+let games = []
 
 const apiKey = "679e7300d01e4563b27ad92076bd7ebc";
 
@@ -10,7 +12,7 @@ const apiKey = "679e7300d01e4563b27ad92076bd7ebc";
 function getHighRated() {
     goodgames = []
 
-    fetch(`https://rawg.io/api/games/?token&key=679e7300d01e4563b27ad92076bd7ebc&ordering=-rating`)
+    fetch(`https://rawg.io/api/games/?token&key=679e7300d01e4563b27ad92076bd7ebc&metacritic=80,100&ordering=-metacritic&dates=2022-01-01,2023-01-23&exclude_additions`)
         .then(res => res.json())
         .then(data =>
         // Grabs the IDs of 20 games and pushes it into 'goodgames' array
@@ -24,6 +26,7 @@ function getHighRated() {
             // console.log(data)
             // calls this function that fetches details for each game
             getGGdetails()
+            // console.log(goodgames)
         })
         //  .then(data => console.log(data.results[1].id))
         .catch(error => console.error('Error:', error));
@@ -33,107 +36,73 @@ function getHighRated() {
 
 
 
-
-
-
 function getGGdetails() {
-    // loops through each game in the array and pulls the info we want to display for each game
+
+    games = []
+
     for (i = 0; i < 20; i++) {
 
         let slctgame = goodgames[i]
         fetch(`https://rawg.io/api/games/${slctgame}?token&key=679e7300d01e4563b27ad92076bd7ebc`)
             .then(res => res.json())
             .then(data => {
-                let gameTitle = data.name;
-                let gameImage = data.background_image;
-                let gameDesc = data.description;
-                let gameRelease = data.released;
-                let gameMetaScore = data.metacritic;
-                let gameRating = data.rating;
-                let gamePlayTime = data.playtime;
-                let gameAch = data.achievements_count;
+                // console.log(data)
 
-                let gamePlatforms = data.platforms
-
-                let gamePlats = []
-
-
-                for (i = 0; i < gamePlatforms.length; i++) {
-
-                    let GgPlatforms = data.platforms[i].platform.name
-                    gamePlats.push(GgPlatforms)
-
+                let selectedProperties = {
+                    id: data.id,
+                    name: data.name,
+                    description: data.description,
+                    released: data.released,
+                    background_image: data.background_image,
+                    metacritic: data.metacritic,
+                    genres: data.genres.map(genres => genres.name)
                 }
+                games.push(selectedProperties)
+                console.log(games)
+                let jsonData = JSON.stringify(games);
 
-                let gameStores = data.stores
-                let gameShops = []
+                fs.readFile('gameData.json', function (err, games) {
+                    var json = JSON.parse(games)
 
-                for (i = 0; i < gameStores.length; i++) {
+                    fs.appendFile("gameData.json", JSON.stringify(jsonData))
+                })
 
-                    let gameShop = data.stores[i].store.name
-                    let gameShopDomain = data.stores[i].store.domain
-                    gameShops.push(gameShop)
-                    gameShops.push(gameShopDomain)
+                // fs.appendFileSync('../../seeds/gameData.json', jsonData);
 
-                }
-
-                let gameGen = data.genres
-                let gameGenres = []
-
-                for (i = 0; i < gameGen.length; i++) {
-
-                    let gameGenre = data.genres[i].name
-                    gameGenres.push(gameGenre)
-
-                }
-
-                let gameTa = data.tags
-                let gameTags = []
-
-                for (i = 0; i < gameTa.length; i++) {
-
-                    let gameTag = data.tags[i].name
-                    gameTags.push(gameTag)
-
-                }
-
-                let gameDeveloper = data.developers
-                let gameDevs = []
-
-                for (i = 0; i < gameDeveloper.length; i++) {
-
-                    let gameDev = data.developers[i].name
-                    gameDevs.push(gameDev)
-
-                }
-
-
-
-
-
-                // console.log(gameTitle);
-                // console.log(gameImage);
-                // console.log(gameDesc);
-                // console.log(gameRelease);
-                // console.log(gameDevs);
-                // console.log(gameMetaScore);
-                // console.log(gameRating);
-                // console.log(gamePlayTime);
-                // console.log(gameAch);
-                // console.log(gamePlats)
-                // console.log(gameShops);
-                // console.log(gameGenres);
-                // console.log(gameTags);
-                // console.log(data);
             })
     }
+    // console.log(games)'
+
+    // let jsonData = JSON.stringify(games);
+
+    // fs.appendFileSync('../../seeds/gameData.json', jsonData);
 };
 
+function displayGames() {
+
+    for (i = 0; i < data.length; i++) {
+
+        let gameContainer = document.createElement('div')
+        let gameImgcon = document.createElement('img')
+        gameImgcon.classList.add("img")
+        let gametitlecon = document.createElement('h2')
 
 
+        gameContainer.classList.add("")
+        gameImgcon.src = gameImage
+        gametitlecon.textContent = gameTitle
 
-// getHighRated()
-// getGGdetails ()
+
+        gameContainer.appendChild(gameImgcon)
+        gameContainer.appendChild(gametitlecon)
+
+
+    }
+}
+
+
+getHighRated()
+// getGGdetails()
 
 
 function getRandomGames() {
@@ -253,56 +222,72 @@ function selectRandoGame() {
 
 
 
-getRandomGames()
+// getRandomGames()
 
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '126aa9a222msh511ea90b77f0d10p1b34d9jsnbf58338755b4',
-        'X-RapidAPI-Host': 'videogames-news2.p.rapidapi.com'
-    }
-};
+// const options = {
+//     method: 'GET',
+//     headers: {
+//         'X-RapidAPI-Key': '126aa9a222msh511ea90b77f0d10p1b34d9jsnbf58338755b4',
+//         'X-RapidAPI-Host': 'videogames-news2.p.rapidapi.com'
+//     }
+// };
 
-fetch('https://videogames-news2.p.rapidapi.com/videogames_news/recent', options)
-    .then(res => res.json())
-    .then(data => {
-        // console.log(data)
+// fetch('https://videogames-news2.p.rapidapi.com/videogames_news/recent', options)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data)
+//     })
 
-        for (i = 0; i < data.length; i++) {
+//         for (i = 0; i < data.length; i++) {
 
-            let newsTitle = data[i].title
-            let newsDate = data[i].date
-            let newsDesc = data[i].description
-            let newsLink = data[i].link
-            let newsImg = data[i].image
-            
-            let newsContainer = document.createElement('div')
-            let newsImgcon = document.createElement('img')
-		    newsImgcon.classList.add("img")
-		    let newstitlecon = document.createElement('h2')
-            let newsDatecon = document.createElement('h3')
-            let newsDescription = document.createElement('h3')
-            
-            newsContainer.classList.add("")
-            newsImgcon.src = newsImg
-            newstitlecon.textContent = newsTitle
-            newstitlecon.href = newsLink
-            newsDatecon.textContent = newsDate
-            newsDescription.textContent = newsDesc
+//             let newsTitle = data[i].title
+//             let newsDate = data[i].date
+//             let newsDesc = data[i].description
+//             let newsLink = data[i].link
+//             let newsImg = data[i].image
 
-            newsContainer.appendChild(newsImgcon)
-		    newsContainer.appendChild(newstitlecon)
-            newsContainer.appendChild(newsDatecon)
-		    newsContainer.appendChild(newsDescription)
+//             let newsContainer = document.createElement('div')
+//             let newsImgcon = document.createElement('img')
+//             newsImgcon.classList.add("img")
+//             let newstitlecon = document.createElement('h2')
+//             let newsDatecon = document.createElement('h3')
+//             let newsDescription = document.createElement('h3')
 
+//             newsContainer.classList.add("")
+//             newsImgcon.src = newsImg
+//             newstitlecon.textContent = newsTitle
+//             newstitlecon.href = newsLink
+//             newsDatecon.textContent = newsDate
+//             newsDescription.textContent = newsDesc
 
-
+//             newsContainer.appendChild(newsImgcon)
+//             newsContainer.appendChild(newstitlecon)
+//             newsContainer.appendChild(newsDatecon)
+//             newsContainer.appendChild(newsDescription)
 
 
 
-        }
 
 
-    })
-    .catch(err => console.error(err));
 
+//         }
+
+//     })
+//     .catch(err => console.error(err));
+
+
+
+// function DetailsPage() {
+//     gameContainer.addEventListener('click', function (event) {
+//         event.preventDefault();
+
+//         console.log(gameID);
+//         localStorage.setItem('GameID', gameID);
+//         window.location.href = "next.html"
+
+//     })
+// }
+
+// function displayGameDetails() {
+
+// }
