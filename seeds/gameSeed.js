@@ -1,13 +1,15 @@
 const { clear } = require('console');
 const fs = require('fs');
 const { finished } = require('stream');
+require("dotenv").config();
+
 let goodgames = []
 
 let RandomGames = []
 
 let games = []
 
-const apiKey = "679e7300d01e4563b27ad92076bd7ebc";
+const apiKey = process.env.RAWGAPIKEY;
 
 // Pulling list of highrated games
 function getHighRated() {

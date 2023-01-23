@@ -1,11 +1,12 @@
 const { clear } = require('console');
 const fs = require('fs');
 const { finished } = require('stream');
+require("dotenv").config();
 
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '126aa9a222msh511ea90b77f0d10p1b34d9jsnbf58338755b4',
+        'X-RapidAPI-Key': process.env.RAPIDAPIKEY,
         'X-RapidAPI-Host': 'videogames-news2.p.rapidapi.com'
     }
 };
