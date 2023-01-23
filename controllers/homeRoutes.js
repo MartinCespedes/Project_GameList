@@ -29,4 +29,12 @@ router.get("/topgames", (req, res) => {
   res.render("topgames");
 });
 
+router.get("/eldenring", (req, res) => {
+  res.render("eldenring");
+});
+
+router.get("/hogwarts", (req, res) => {
+  res.render("hogwarts");
+});
+
 module.exports = router;
