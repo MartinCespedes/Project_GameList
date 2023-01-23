@@ -2,7 +2,7 @@ const router = require("express").Router();
 // const { User } = require("../models");
 
 router.get("/", (req, res) => {
-  res.render("login")
+  res.render("homepage")
 });
 
 router.get('/login', (req, res) => {
@@ -12,7 +12,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', { layout: 'main2' });
 });
 
 
