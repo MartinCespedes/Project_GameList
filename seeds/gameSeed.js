@@ -63,7 +63,7 @@ function getGGdetails() {
                 
                 // let jsonData = JSON.stringify(games, null, 2);
 
-                fs.writeFileSync('seeds/gameData.json', JSON.stringify(games, null, 2), finished)
+                fs.writeFileSync('./seeds/gameData.json', JSON.stringify(games, null, 2), finished)
 
                 // fs.appendFileSync('../../seeds/gameData.json', jsonData);
 

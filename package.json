@@ -8,6 +8,7 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js",
     "seedgames": "node seeds/gameSeed.js",
+    "seednews": "node seeds/newsSeed.js",
     "dev": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch"
   },
   "dependencies": {
