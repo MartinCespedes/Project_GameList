@@ -1,5 +1,6 @@
 const { clear } = require('console');
 const fs = require('fs');
+const { finished } = require('stream');
 let goodgames = []
 
 let RandomGames = []
@@ -59,13 +60,10 @@ function getGGdetails() {
                 }
                 games.push(selectedProperties)
                 console.log(games)
-                let jsonData = JSON.stringify(games);
+                
+                // let jsonData = JSON.stringify(games, null, 2);
 
-                fs.readFile('gameData.json', function (err, games) {
-                    var json = JSON.parse(games)
-
-                    fs.appendFile("gameData.json", JSON.stringify(jsonData))
-                })
+                fs.writeFileSync('../../seeds/gameData.json', JSON.stringify(games, null, 2), finished)
 
                 // fs.appendFileSync('../../seeds/gameData.json', jsonData);
 
