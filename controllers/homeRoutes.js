@@ -25,4 +25,8 @@ router.get("/about", (req, res) => {
   res.render("about");
 });
 
+router.get("/topgames", (req, res) => {
+  res.render("topgames");
+});
+
 module.exports = router;
