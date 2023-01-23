@@ -5,9 +5,9 @@
         "password": "testpassword"
     },
     {
-        "username": "evagreen",
-        "email": "eva@email.com",
-        "password": "testpassword"
+        "username": "billyloomis",
+        "email": "bloomis@email.com",
+        "password": "hellosidney"      
     },
     {
         "username": "elizabethc",
@@ -23,5 +23,15 @@
         "username": "wednesdayadd",
         "email": "wednesday@email.com",
         "password": "snapsnap"
+    },
+    {
+        "username": "michaeldoug",
+        "email": "mdoug@email.com",
+        "password": "testpassword"
+    },
+    {
+        "username": "evagreen",
+        "email": "eva@email.com",
+        "password": "testpassword"
     }
 ]  
