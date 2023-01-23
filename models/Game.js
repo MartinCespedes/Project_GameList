@@ -15,21 +15,24 @@ Game.init(
     title: {
       type: DataTypes.STRING,
     },
-    author: {
+    image: {
       type: DataTypes.STRING,
     },
-    isbn: {
+    description: {
       type: DataTypes.STRING,
     },
-    score: {
+    rating : {
+      type: DataTypes.INTEGER,
+    },
+    metascore: {
       type: DataTypes.INTEGER,
     },
     year: {
       type: DataTypes.INTEGER,
     },
-    reviews: {
+    genre: {
       type: DataTypes.STRING,
-    },
+    }
   },
   {
     sequelize,
@@ -37,7 +40,7 @@ Game.init(
     // Prevent sequelize from renaming the table
     freezeTableName: true,
     underscored: true,
-    modelName: "Games",
+    modelName: "game",
   }
 );
 

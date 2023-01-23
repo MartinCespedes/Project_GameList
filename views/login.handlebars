@@ -1,21 +1,4 @@
-{{!-- <h2>Login</h2>
-
-<form class="form login-form">
-    <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-    </div>
-    <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-    </div>
-</form>
-
-<script src="/js/login.js"></script> --}}
-
+<form class="login-form">
         <div class="h-full bg-gradient-to-tl from-orange-400 to-rose-900 w-full py-16 px-4">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex align-middle items-center gap-4">
@@ -48,14 +31,14 @@
                             <label id="email" class="text-sm font-medium leading-none text-gray-800">
                                 Email
                             </label>
-                            <input aria-labelledby="email" type="email" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
+                            <input id="email-login" aria-labelledby="email" type="email" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
                         </div>
                         <div class="mt-6  w-full">
                             <label for="pass" class="text-sm font-medium leading-none text-gray-800">
                                 Password
                             </label>
                            <div class="relative flex items-center justify-center">
-                            <input id="pass" type="password" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
+                            <input id="password-login" type="password" class="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"/>
                             <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
                               <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg5.svg" alt="viewport">                                    
                             </div>
@@ -67,7 +50,7 @@
                 </div>
             </div>
         </div>
-    
+    </form>
 
 <script src="/js/login.js"></script>
 
