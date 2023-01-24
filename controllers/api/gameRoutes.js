@@ -19,4 +19,12 @@ router.get('/top20', async (req, res) => {
     }
 });
 
+router.get("/eldenring", (req, res) => {
+    res.render("eldenring");
+});
+
+router.get("/hogwarts", (req, res) => {
+    res.render("hogwarts");
+});
+
 module.exports = router;
