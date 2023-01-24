@@ -20,4 +20,9 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   res.render("signup", { layout: 'main2' })
 })
+
+router.get('/about', (req, res) => {
+  res.render("about")
+})
 module.exports = router;
+

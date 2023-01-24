@@ -77,3 +77,5 @@ function getGGdetails() {
 
     // fs.appendFileSync('../../seeds/gameData.json', jsonData);
 };
+
+getHighRated();
