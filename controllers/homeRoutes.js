@@ -17,6 +17,11 @@ router.get("/login", (req, res) => {
   res.render("login", { layout: "main2" });
 });
 
+
+router.get('/signup', (req, res) => {
+  res.render("signup", { layout: 'main2' })
+})
+
 router.get("/news", (req, res) => {
   res.render("news");
 });
@@ -37,4 +42,6 @@ router.get("/hogwarts", (req, res) => {
   res.render("hogwarts");
 });
 
+
 module.exports = router;
+

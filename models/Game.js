@@ -6,31 +6,28 @@ class Game extends Model {}
 Game.init(
   {
     // Manually define the primary key
-    game_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
     },
-    image: {
+    background_image: {
       type: DataTypes.STRING,
     },
     description: {
+      type: DataTypes.STRING(3000),
+    },
+    released: {
       type: DataTypes.STRING,
     },
-    rating : {
+    metacritic: {
       type: DataTypes.INTEGER,
     },
-    metascore: {
-      type: DataTypes.INTEGER,
-    },
-    year: {
-      type: DataTypes.INTEGER,
-    },
-    genre: {
+    genres: {
       type: DataTypes.STRING,
     }
   },
