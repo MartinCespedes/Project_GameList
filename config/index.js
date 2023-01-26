@@ -6,6 +6,5 @@ module.exports = {
   API_KEY: process.env.API_KEY,
   DB_USER: process.env.DB_USER,
   DB_PASSWORD: process.env.DB_PASSWORD,
-  SQPORT: process.env.SQPORT,
   JAWSDB_URL: process.JAWSDB_URL,
 };
