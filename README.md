@@ -29,7 +29,7 @@ As full stack developers, we will conceive and execute a design that solves a re
 
 Instead of using the front end developed for on our first project, we are going to start from scratch. Doing so will help us reinforce our existing front-end abilities and solidify understanding of the dynamic between the front end and back end. Also, we all have likely improved our skills since that first project, so with a stronger foundation now we are going to build a better application, using all of the additional practice from the last several weeks.
 
-Now, as contributors to PROJECT_S.C.A.M we will use everything that has been learned over the past six weeks to create a full-stack application that works with real-world data to solve a real-world challenge. Even more than the first group project, this project will provide an opportunity to demonstrate problem-solving skills, which employers will want to see when you begin to interview for development roles. Once again, the user story and acceptance criteria will depend on the project that we will create, but the project must fulfill the following requirements:
+Now, as contributors to PROJECT GameList we will use everything that has been learned over the past six weeks to create a full-stack application that works with real-world data to solve a real-world challenge. Even more than the first group project, this project will provide an opportunity to demonstrate problem-solving skills, which employers will want to see when you begin to interview for development roles. Once again, the user story and acceptance criteria will depend on the project that we will create, but the project must fulfill the following requirements:
 
 ## Project Requirements
 
