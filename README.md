@@ -1,18 +1,21 @@
-## :space_invader:Project S.C.A.M:space_invader:
+## :space_invader:Project The GameList:space_invader:
 
-Project 2
+- University of Miami
+- Project 2 : Full Stack Application
+
+##
+
+- [Live Link to Heroku APP](https://project-gamelist.herokuapp.com/)
+
 ## Contents
+
 [Description](#description)
 
 [Project Requirements](#project-requirements)
 
-[Acceptance Criteria](#acceptance-criteria)
-
 [Presentation Requirements](#presentation-requirements)
 
 [Installation](#installation)
-
-[Usage](#usage)
 
 [Developers](#developers)
 
@@ -29,6 +32,7 @@ Instead of using the front end developed for on our first project, we are going 
 Now, as contributors to PROJECT_S.C.A.M we will use everything that has been learned over the past six weeks to create a full-stack application that works with real-world data to solve a real-world challenge. Even more than the first group project, this project will provide an opportunity to demonstrate problem-solving skills, which employers will want to see when you begin to interview for development roles. Once again, the user story and acceptance criteria will depend on the project that we will create, but the project must fulfill the following requirements:
 
 ## Project Requirements
+
 ```md
 Use Node.js and Express.js to create a RESTful API.
 
@@ -60,6 +64,7 @@ Have a professional README (with unique name, description, technologies used, sc
 ```
 
 ## Presentation Requirements
+
 ```md
 Elevator pitch: A one-minute description of your application.
 
@@ -74,6 +79,32 @@ Directions for future development.
 Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MySQL Links to an external site.on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 ```
 
+## Installation
+
+- git clone https gitHub Link (https://github.com/MartinCespedes/project-gamelist.git)
+
+##
+
+The packages required to run are:
+
+- bcrypt
+
+- connect-session-sequelize
+
+- dotenv
+
+- express
+
+- express-handlebars
+
+- express-session
+
+- mysql2
+
+- sequelize
+
+A database will need to be created first then seeded wih data.
+
 ## Developers
 
 - Sebastian Barrera (BARRERSE) [Link to Github](https://github.com/Barrerse)
@@ -83,4 +114,16 @@ Links to the deployed application and the GitHub repository. Use the Guide to De
 
 ## Licenses
 
-- N/A
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Application Screenshot Preview
+
+![GameList Screenshot 1](././public/assets/img/Screenshot_20230201_100852.png)
+
+##
+
+![GameList Screenshot 2](././public/assets/img/Screenshot_20230201_101117.png)
+
+##
+
+![GameList Screenshot 3](././public/assets/img/Screenshot_20230201_101339.png)
