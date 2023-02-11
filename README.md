@@ -1,6 +1,8 @@
+## 
 :space_invader: Project GameList :space_invader:
-Overview
-Project GameList is a full-stack web application that combines a robust back end with a user-friendly front end. The application has been developed as part of the University of Miami's Full Stack Application project and it meets all the project requirements as outlined below.
+
+## Overview
+- Project GameList is a full-stack web application that combines a robust back end with a user-friendly front end. The application has been developed as part of the University of Miami's Full Stack Application project and it meets all the project requirements as outlined below.
 
 ##
 - [Live Link to Heroku APP](https://project-gamelist.herokuapp.com/)
