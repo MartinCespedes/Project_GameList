@@ -1,35 +1,25 @@
-## :space_invader:Project The GameList:space_invader:
+:space_invader: Project GameList :space_invader:
+Overview
+Project GameList is a full-stack web application that combines a robust back end with a user-friendly front end. The application has been developed as part of the University of Miami's Full Stack Application project and it meets all the project requirements as outlined below.
 
-- University of Miami
-- Project 2 : Full Stack Application
+##
+- [Live Link to Heroku APP](https://project-gamelist.herokuapp.com/)
 
 ##
 
-- [Live Link to Heroku APP](https://project-gamelist.herokuapp.com/)
-
-## Contents
-
+Table of Contents
 [Description](#description)
-
 [Project Requirements](#project-requirements)
-
 [Presentation Requirements](#presentation-requirements)
-
 [Installation](#installation)
-
 [Developers](#developers)
-
-[Licences](#licences)
-
+[License](#license)
 [Application Screenshot Preview](#application-screenshot-preview)
+
 
 ## Description
 
-As full stack developers, we will conceive and execute a design that solves a real-world problem. In creating our first collaborative full-stack application, we will combine a robust back end—with servers, databases, advanced APIs, and user authentication—to an intuitive front end. We will continue to build on the agile development methodologies that we've used in the past throughout this course, like storing project code in GitHub, managing work with a project management tool, and implementing feature and bug fixes using the Git branch workflow and pull requests.
-
-Instead of using the front end developed for on our first project, we are going to start from scratch. Doing so will help us reinforce our existing front-end abilities and solidify understanding of the dynamic between the front end and back end. Also, we all have likely improved our skills since that first project, so with a stronger foundation now we are going to build a better application, using all of the additional practice from the last several weeks.
-
-Now, as contributors to PROJECT GameList we will use everything that has been learned over the past six weeks to create a full-stack application that works with real-world data to solve a real-world challenge. Even more than the first group project, this project will provide an opportunity to demonstrate problem-solving skills, which employers will want to see when you begin to interview for development roles. Once again, the user story and acceptance criteria will depend on the project that we will create, but the project must fulfill the following requirements:
+- Project GameList is a full-stack web application that provides a solution to a real-world problem. The application has been developed using agile development methodologies and version control with GitHub. The back end uses Node.js, Express.js, and MySQL with the Sequelize ORM to store data and the front end uses Handlebars.js for the template engine. The application also implements user authentication with express-session and cookies. Sensitive information such as API keys is protected using environment variables. The application has been deployed on Heroku and has a polished user interface that is both responsive and interactive.
 
 ## Project Requirements
 
@@ -81,7 +71,17 @@ Links to the deployed application and the GitHub repository. Use the Guide to De
 
 ## Installation
 
-- git clone https gitHub Link (https://github.com/MartinCespedes/project-gamelist.git)
+- 1. Clone the repository to your local machine using the following command: 
+```md
+git clone(https://github.com/MartinCespedes/project-gamelist.git)
+```
+
+- 2. Install the required packages by running the following command:
+```md 
+npm install
+```
+
+- 3. Create a database and seed it with data.
 
 ##
 
@@ -115,6 +115,16 @@ A database will need to be created first then seeded wih data.
 ## Licenses
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+Copyright (c) 2023 project-gamelist
+
+This software is copyrighted by the project-gamelist team. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Application Screenshot Preview
 
