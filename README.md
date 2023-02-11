@@ -7,15 +7,20 @@
 ##
 - [Live Link to Heroku APP](https://project-gamelist.herokuapp.com/)
 
-##
+## Table of Contents
 
-Table of Contents
 [Description](#description)
+
 [Project Requirements](#project-requirements)
+
 [Presentation Requirements](#presentation-requirements)
+
 [Installation](#installation)
+
 [Developers](#developers)
+
 [License](#license)
+
 [Application Screenshot Preview](#application-screenshot-preview)
 
 
